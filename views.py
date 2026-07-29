@@ -25,8 +25,8 @@ class HelpdeskUI:
         header.pack(fill=tk.X)
         ttk.Label(
             header,
-            text="Bienvenido Dashboard de soporte técnico",
-            font=("Segoe UI", 16, "bold")
+            text="Bienvenido Dashboard de Soporte Técnico",
+            font=("Segoe UI", 18, "bold italic")
         ).pack(side=tk.LEFT)
 
         # Contenedor Principal
