@@ -27,7 +27,8 @@ class HelpdeskUI:
             header,
             text="Bienvenido Dashboard de Soporte Técnico",
             font=("Segoe UI", 18, "bold italic")
-        ).pack(side=tk.LEFT)
+            anchor="center"
+        ).pack(expand=True, fill=tk.X)
 
         # Contenedor Principal
         main_frame = ttk.Frame(self.root, padding=10)
