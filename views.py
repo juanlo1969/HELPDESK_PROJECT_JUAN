@@ -23,10 +23,20 @@ class HelpdeskUI:
         # Cabecera
         header = ttk.Frame(self.root, padding=12)
         header.pack(fill=tk.X)
+        # Crear la etiqueta de bienbenida con estilo
+        # Crear el estilo
+        style = ttk.Style()
+
+        style.configure(
+            "Titulo.TLabel",
+            font=("Segoe UI", 18, "bold italic"),
+            foreground="#1565C0"   # Color azul
+        )
+
         ttk.Label(
             header,
             text="Bienvenido Dashboard de Soporte Técnico",
-            font=("Segoe UI", 18, "bold,italic")
+            style="Titulo.TLabel",
             anchor="center"
         ).pack(expand=True, fill=tk.X)
 
