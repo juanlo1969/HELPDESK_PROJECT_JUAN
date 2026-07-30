@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+
+from click import style
 from models import TicketManager
 
 class HelpdeskUI:
@@ -82,8 +84,20 @@ class HelpdeskUI:
         self.cmb_prioridad.pack(fill=tk.X, pady=(0, 10))
 
         # Botones
-        ttk.Button(frame, text="Crear Ticket", command=self._on_crear).pack(fill=tk.X, pady=(0, 5))
-        ttk.Button(frame, text="Limpiar Campos", command=self._limpiar_formulario).pack(fill=tk.X)
+        self.style.configure(
+            "Azul.TButton",
+            font=("Segoe UI", 10, "bold"),
+            foreground="blue"
+        )
+
+        self.style.configure(
+            "Rojo.TButton",
+            font=("Segoe UI", 10, "bold"),
+            foreground="red"
+        )
+
+        ttk.Button(frame, text="Crear Ticket", command=self._on_crear, style="Azul.TButton").pack(fill=tk.X, pady=(0, 5))
+        ttk.Button(frame, text="Limpiar Campos", command=self._limpiar_formulario, style="Rojo.TButton").pack(fill=tk.X)
 
     def _crear_panel_derecho(self, parent):
         right_frame = ttk.Frame(parent)
