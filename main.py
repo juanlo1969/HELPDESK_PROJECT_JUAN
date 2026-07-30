@@ -15,5 +15,8 @@ def main():
     # 4. Iniciar el bucle de eventos
     root.mainloop()
 
+# Esta línea asegura que la función main() se ejecute solo si este archivo se ejecuta directamente, y no si se importa como un módulo en otro archivo.
 if __name__ == "__main__":
     main()
+
+    
