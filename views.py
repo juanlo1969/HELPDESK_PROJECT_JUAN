@@ -143,8 +143,22 @@ class HelpdeskUI:
         actions = ttk.Frame(right_frame, padding=(0, 10, 0, 0))
         actions.pack(fill=tk.X)
 
-        ttk.Button(actions, text="Cambiar estado", command=self._on_cambiar_estado).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(actions, text="Eliminar Ticket", command=self._on_eliminar).pack(side=tk.LEFT)
+        # Estilo para el botón "Cambiar estado"
+        self.style.configure(
+            "Cambiar.TButton",
+            font=("Segoe UI", 10, "bold"),
+            foreground="blue"
+        )
+
+        # Estilo para el botón "Eliminar Ticket"
+        self.style.configure(
+            "Eliminar.TButton",
+            font=("Segoe UI", 10, "bold"),
+            foreground="red"
+        )
+
+        ttk.Button(actions, text="Cambiar estado", command=self._on_cambiar_estado, style="Cambiar.TButton").pack(side=tk.LEFT, padx=(0, 5))
+        ttk.Button(actions, text="Eliminar Ticket", command=self._on_eliminar, style="Eliminar.TButton").pack(side=tk.LEFT)
 
         # Métricas
         self.lbl_stats = ttk.Label(right_frame, text="", font=("Segoe UI", 9, "italic"))
