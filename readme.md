@@ -147,6 +147,71 @@ La arquitectura permite incorporar fácilmente:
 * Registro de auditoría.
 * Copias de seguridad automáticas.
 * API REST.
+💾 Módulo de Copias de Seguridad (Roadmap)
+
+Como evolución del proyecto se plantea la incorporación de un módulo de copias de seguridad (Backup Manager) que permita proteger la información almacenada por la aplicación y facilitar su recuperación ante incidencias.
+
+Objetivos
+Garantizar la disponibilidad de los datos.
+Evitar la pérdida de información por errores humanos o fallos del sistema.
+Permitir la restauración rápida del histórico de tickets.
+Automatizar el proceso de generación de copias de seguridad.
+Funcionalidades previstas
+📁 Copias de seguridad manuales mediante un botón en la interfaz.
+⏱️ Copias de seguridad automáticas configurables (diarias, semanales o mensuales).
+📦 Compresión de los archivos de respaldo en formato ZIP.
+🗂️ Organización automática de las copias por fecha y hora.
+🔄 Restauración de una copia de seguridad desde la aplicación.
+🧹 Eliminación automática de copias antiguas según una política de retención configurable.
+✔️ Verificación de la integridad de las copias antes de su restauración.
+📝 Registro de todas las operaciones de backup y restauración mediante el sistema de logging.
+Arquitectura propuesta
+Usuario
+    │
+    ▼
+Backup Manager
+    │
+    ├────────► Backup Manual
+    │
+    ├────────► Backup Programado
+    │
+    ├────────► Restauración
+    │
+    └────────► Verificación de Integridad
+                    │
+                    ▼
+            Carpeta /backups
+                    │
+                    ├── backup_2026-07-30_10-00.zip
+                    ├── backup_2026-07-31_10-00.zip
+                    └── ...
+Estructura prevista del proyecto
+helpdesk_project/
+
+├── backup.py
+├── backup_manager.py
+├── backups/
+│      ├── backup_2026-07-30.zip
+│      ├── backup_2026-08-01.zip
+│      └── ...
+Integración con la aplicación
+
+El módulo se integrará de forma desacoplada siguiendo la arquitectura SoC del proyecto. Desde la interfaz gráfica se incorporará un nuevo menú "Copias de Seguridad" con las siguientes opciones:
+
+Crear copia de seguridad.
+Restaurar copia.
+Ver historial de copias.
+Configurar copias automáticas.
+Abrir carpeta de respaldos.
+
+La lógica de backup permanecerá independiente del resto de componentes, facilitando su mantenimiento y futuras ampliaciones.
+
+Beneficios
+Mayor resiliencia frente a fallos.
+Protección frente a borrados accidentales.
+Recuperación rápida de la información.
+Mejora de la continuidad del servicio.
+Preparación para entornos empresariales donde la protección del dato es un requisito esencial.
 
 ---
 
