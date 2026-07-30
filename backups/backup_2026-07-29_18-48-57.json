@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "usuario": "juan",
+    "descripcion": "averia",
+    "categoria": "Accesos/Permisos",
+    "prioridad": "Baja",
+    "estado": "Pendiente",
+    "fecha_creacion": "2026-07-29 18:14:48"
+  }
+]

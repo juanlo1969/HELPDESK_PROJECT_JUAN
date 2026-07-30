@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "usuario": "juan",
+    "descripcion": "averia",
+    "categoria": "Accesos/Permisos",
+    "prioridad": "Baja",
+    "estado": "Pendiente",
+    "fecha_creacion": "2026-07-29 18:14:48"
+  },
+  {
+    "id": 2,
+    "usuario": "pepe",
+    "descripcion": "mantenimiento",
+    "categoria": "Software",
+    "prioridad": "Alta",
+    "estado": "Pendiente",
+    "fecha_creacion": "2026-07-29 18:59:58"
+  },
+  {
+    "id": 3,
+    "usuario": "luis",
+    "descripcion": "sustitucion",
+    "categoria": "Hardware",
+    "prioridad": "Media",
+    "estado": "Pendiente",
+    "fecha_creacion": "2026-07-29 19:00:42"
+  },
+  {
+    "id": 4,
+    "usuario": "maria",
+    "descripcion": "compras",
+    "categoria": "Redes/Conectividad",
+    "prioridad": "Media",
+    "estado": "Pendiente",
+    "fecha_creacion": "2026-07-29 19:01:44"
+  }
+]

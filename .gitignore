@@ -1,0 +1,5 @@
+Get-Service ssh-agent
+Get-Service ssh-agent.pub
+__pycache__
+/models.cpython-313.pyc
+main.py
